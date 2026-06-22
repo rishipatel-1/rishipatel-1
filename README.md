@@ -28,11 +28,19 @@ Infrastructure that lets AI agents securely call external tools at scale. The ki
 
 ## Stack
 
-Python, TypeScript, FastAPI, Node.js, NestJS, React, Next.js, PostgreSQL, pgvector, Redis, LangGraph, LangChain, AWS (Lambda, SQS, Kafka, DynamoDB), Docker
+Python, TypeScript, FastAPI, Node.js, NestJS, React, Next.js, PostgreSQL, pgvector, Redis, LangGraph, LangChain, AWS (Lambda, SQS, Kafka, DynamoDB), Docker, Kubernetes
 
-## Beyond what's public
+## What's in private repos
 
-Most of my production work lives in private repos — multi-agent orchestration systems, event-driven backends on AWS, real-time streaming applications, and full-stack products with React/Next.js + NestJS. The green squares are real.
+The public repos are the indie builds. The private ones are production systems I've designed, built, and shipped:
+
+- **Multi-agent AI orchestration** — 6-agent LangGraph workflow with conditional routing, state persistence, quality scoring, and multi-model LLM fallbacks. Live in production serving real users. Perceived latency went from 60s to 10s through streaming and parallel execution.
+- **Event-driven backends at scale** — Kafka + SQS + Lambda + DynamoDB handling 500K+ concurrent users with 35% downtime reduction. Designed for fault tolerance — circuit breakers, exponential backoff, graceful degradation.
+- **Real-time streaming infrastructure** — Electron + React desktop app coordinating 14+ internal services over WebSocket, RTMP, and FFmpeg pipelines. Central state machine with heartbeat monitoring and automatic recovery.
+- **Full-stack product delivery** — 10+ production applications shipped with React/Next.js frontends, NestJS/Express backends, PostgreSQL/MongoDB datastores. Payment integrations (Stripe, PayPal), CI/CD on AWS, Docker deployments.
+- **Cloud infrastructure & DevOps** — AWS (Lambda, EC2, S3, SQS, Kafka, DynamoDB, ElastiCache, CloudFormation), Docker multi-stage builds, Kubernetes deployments, GitHub Actions / GitLab CI/CD pipelines, infrastructure as code.
+
+The green squares are real. 1,900+ contributions in the last year across all of this.
 
 ![Contribution Activity](./assets/contributions.png)
 
